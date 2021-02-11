@@ -26,7 +26,7 @@ app.post('/productos',(req,res)=>{
 })
 
 
-app.get('/gatos/:id',(req,res)=>{
+app.get('/productos/:id',(req,res)=>{
     const id = req.params.id
     const producto = productos.find(gato=> gato.id === id)
     if (!producto) {
