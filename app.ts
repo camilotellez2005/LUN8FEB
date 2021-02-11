@@ -6,8 +6,24 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send('hola mundo')
 });
-
-let productos: any[]=[];
+//productos iniciales
+let productos: any[]=[
+    {id:1,
+     title:"cuchara",
+     price:12000,
+     thumbnail:'www.cuachara.com'
+    },
+    {id:2,
+        title:"cuchillo",
+        price:10000,
+        thumbnail:'www.cuchillo.com'
+       },
+       {id:3,
+        title:"tenedor",
+        price:16000,
+        thumbnail:'www.tenedor.com'
+       },
+];
 
 app.get('/productos',(req,res)=>{
     res.json(productos)
